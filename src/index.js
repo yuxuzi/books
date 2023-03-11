@@ -1,16 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import BooksContext from './context/books';
 
+import "./index.css";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import { Provider } from './context/books';
 
+const el = document.getElementById('root');
+const root = ReactDOM.createRoot(el);
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BooksContext.Provider>
+  <Provider>
     <App />
-  </BooksContext.Provider>
+  </Provider>
 );
 
 
